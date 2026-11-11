@@ -12,6 +12,7 @@ require('conform').setup {
       c = true,
       cpp = true,
       cmake = true,
+      glsl = true,
     }
     if enabled_filetypes[vim.bo[bufnr].filetype] then
       return { timeout_ms = 500 }
@@ -31,6 +32,7 @@ require('conform').setup {
     c = { 'clang_format' },
     cpp = { 'clang_format' },
     cmake = { 'cmake_format' },
+    glsl = { 'clang_format' },
     -- You can use 'stop_after_first' to run the first available formatter from the list
     -- javascript = { "prettierd", "prettier", stop_after_first = true },
   },
