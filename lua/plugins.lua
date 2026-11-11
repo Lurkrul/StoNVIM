@@ -10,7 +10,7 @@ require 'kickstart.plugins.telescope' -- used for fuzzy finder
 require 'kickstart.plugins.lspconfig' -- sets up LSP server (add custom ones in the lspconfig.lua file as needed)
 require 'kickstart.plugins.conform' -- sets formatting on save
 require 'kickstart.plugins.blink-cmp' -- code completion
-require 'kickstart.plugins.treesitter'
+require 'kickstart.plugins.treesitter' -- handles syntax
 
 -- The following comments only work if you have downloaded the kickstart repo, not just copy pasted the
 -- init.lua. If you want these files, they are in the repository, so you can just download them and
@@ -21,7 +21,7 @@ require 'kickstart.plugins.treesitter'
 --  Here are some example plugins that I've included in the Kickstart repository.
 --  Uncomment any of the lines below to enable them (you will need to restart nvim).
 --
--- require 'kickstart.plugins.debug'
+require 'kickstart.plugins.debug' -- debugging
 -- require 'kickstart.plugins.indent_line'
 -- require 'kickstart.plugins.lint'
 -- require 'kickstart.plugins.autopairs'
