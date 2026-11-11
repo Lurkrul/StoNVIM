@@ -23,7 +23,7 @@ require 'kickstart.plugins.treesitter' -- handles syntax
 --
 require 'kickstart.plugins.debug' -- debugging
 require 'kickstart.plugins.indent_line'
--- require 'kickstart.plugins.lint'
+require 'kickstart.plugins.lint'
 -- require 'kickstart.plugins.autopairs'
 -- require 'kickstart.plugins.neo-tree'
 
