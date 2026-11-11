@@ -24,7 +24,7 @@ require 'kickstart.plugins.treesitter' -- handles syntax
 require 'kickstart.plugins.debug' -- debugging
 require 'kickstart.plugins.indent_line'
 require 'kickstart.plugins.lint'
--- require 'kickstart.plugins.autopairs'
+require 'kickstart.plugins.autopairs'
 -- require 'kickstart.plugins.neo-tree'
 
 -- NOTE: You can add your own plugins, configuration, etc. in `lua/custom/plugins/*.lua`.
