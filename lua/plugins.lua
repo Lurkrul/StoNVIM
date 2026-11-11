@@ -1,12 +1,12 @@
 -- Load plugin modules in order.
 
 --require 'kickstart.plugins.guess-indent'
-require 'kickstart.plugins.gitsigns'
-require 'kickstart.plugins.which-key'
-require 'kickstart.plugins.tokyonight'
-require 'kickstart.plugins.todo-comments'
-require 'kickstart.plugins.mini'
-require 'kickstart.plugins.telescope'
+require 'kickstart.plugins.gitsigns' -- adds git blame, diff, etc
+require 'kickstart.plugins.which-key' -- adds the key menu when you press a key to give you operations
+require 'kickstart.plugins.tokyonight' -- tokyo night theme
+require 'kickstart.plugins.todo-comments' -- adds the TODO HACK NOTE WARNING FIX PERF comment styling
+require 'kickstart.plugins.mini' -- adds alot of useful modules
+require 'kickstart.plugins.telescope' -- used for fuzzy finder
 require 'kickstart.plugins.lspconfig'
 require 'kickstart.plugins.conform'
 require 'kickstart.plugins.blink-cmp'
