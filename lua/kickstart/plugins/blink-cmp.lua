@@ -39,7 +39,9 @@ require('blink.cmp').setup {
     -- <c-k>: Toggle signature help
     --
     -- See `:help blink-cmp-config-keymap` for defining your own keymap
-    preset = 'default',
+    preset = 'enter', -- change to use enter + arrow keys
+    ['<Tab>'] = { 'select_next', 'snippet_forward', 'fallback' }, -- tab to go to next selection
+    ['<S-Tab>'] = { 'select_prev', 'snippet_backward', 'fallback' }, -- shift tab to go to previous selection
 
     -- For more advanced Luasnip keymaps (e.g. selecting choice nodes, expansion) see:
     --    https://github.com/L3MON4D3/LuaSnip?tab=readme-ov-file#keymaps
@@ -55,6 +57,7 @@ require('blink.cmp').setup {
     -- By default, you may press `<c-space>` to show the documentation.
     -- Optionally, set `auto_show = true` to show the documentation after a delay.
     documentation = { auto_show = false, auto_show_delay_ms = 500 },
+    list = { selection = { preselect = false } },
   },
 
   sources = {

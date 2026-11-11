@@ -8,8 +8,8 @@ require 'kickstart.plugins.todo-comments' -- adds the TODO HACK NOTE WARNING FIX
 require 'kickstart.plugins.mini' -- adds alot of useful modules
 require 'kickstart.plugins.telescope' -- used for fuzzy finder
 require 'kickstart.plugins.lspconfig' -- sets up LSP server (add custom ones in the lspconfig.lua file as needed)
-require 'kickstart.plugins.conform'
-require 'kickstart.plugins.blink-cmp'
+require 'kickstart.plugins.conform' -- sets formatting on save
+require 'kickstart.plugins.blink-cmp' -- code completion
 require 'kickstart.plugins.treesitter'
 
 -- The following comments only work if you have downloaded the kickstart repo, not just copy pasted the
