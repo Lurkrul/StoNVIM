@@ -103,8 +103,8 @@ vim.api.nvim_create_autocmd('LspAttach', {
 --  See `:help lsp-config` for information about keys and how to configure
 ---@type table<string, vim.lsp.Config>
 local servers = {
-    clangd = {},
-    neocmake = {},
+  clangd = {},
+  neocmake = {},
   -- gopls = {},
   -- pyright = {},
   -- tsc = {},
@@ -175,6 +175,7 @@ require('mason-lspconfig').setup {
 local ensure_installed = vim.tbl_keys(servers or {})
 vim.list_extend(ensure_installed, {
   -- You can add other tools here that you want Mason to install
+  'clang-format',
 })
 
 require('mason-tool-installer').setup { ensure_installed = ensure_installed }

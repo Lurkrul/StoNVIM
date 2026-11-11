@@ -3,12 +3,14 @@ local function gh(repo) return 'https://github.com/' .. repo end
 -- [[ Formatting ]]
 vim.pack.add { gh 'stevearc/conform.nvim' }
 require('conform').setup {
-  notify_on_error = false,
+  notify_on_error = true,
   format_on_save = function(bufnr)
     -- You can specify filetypes to autoformat on save here:
     local enabled_filetypes = {
-      -- lua = true,
+      lua = true,
       -- python = true,
+      c = true,
+      cpp = true,
     }
     if enabled_filetypes[vim.bo[bufnr].filetype] then
       return { timeout_ms = 500 }
@@ -25,8 +27,21 @@ require('conform').setup {
     -- Conform can also run multiple formatters sequentially
     -- python = { "isort", "black" },
     --
+    c = { 'clang_format' },
+    cpp = { 'clang_format' },
     -- You can use 'stop_after_first' to run the first available formatter from the list
     -- javascript = { "prettierd", "prettier", stop_after_first = true },
+  },
+  formatters = {
+    clang_format = {
+      prepend_args = function(_, ctx)
+        local local_config = vim.fs.find({ '.clang-format', '_clang-format' }, { path = ctx.dirname, upward = true })[1]
+        if local_config then return {} end
+        return {
+          '--style=file:' .. vim.fn.stdpath 'config' .. '/config/clang-format.yaml',
+        }
+      end,
+    },
   },
 }
 
