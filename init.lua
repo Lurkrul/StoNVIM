@@ -4,6 +4,9 @@ require 'options'
 -- [[ Basic Keymaps ]]
 require 'keymaps'
 
+-- set cache location for base46
+vim.g.base46_cache = vim.fn.stdpath 'data' .. '/base64_cache/'
+
 -- [[ Set up vim.pack ]]
 require 'pack'
 

@@ -3,7 +3,7 @@
 --require 'kickstart.plugins.guess-indent'
 require 'kickstart.plugins.gitsigns' -- adds git blame, diff, etc
 require 'kickstart.plugins.which-key' -- adds the key menu when you press a key to give you operations
-require 'kickstart.plugins.tokyonight' -- tokyo night theme
+--require 'kickstart.plugins.tokyonight' -- tokyo night theme
 require 'kickstart.plugins.todo-comments' -- adds the TODO HACK NOTE WARNING FIX PERF comment styling
 require 'kickstart.plugins.mini' -- adds alot of useful modules
 require 'kickstart.plugins.telescope' -- used for fuzzy finder
@@ -40,5 +40,6 @@ require 'kickstart.plugins.neo-tree'
 -- require 'custom.plugins.colorscheme'
 -- require 'custom.plugins.ui'
 -- require 'custom.plugins.git'
-
+require 'custom.plugins.nvui'
+require 'custom.plugins.fugitive'
 -- vim: ts=2 sts=2 sw=2 et
